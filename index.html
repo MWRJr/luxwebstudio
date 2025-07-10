@@ -202,21 +202,30 @@
       color: #64748b;
     }
     @media (max-width: 768px) {
-      nav {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      nav img.logo {
-        height: 110px;
-        margin-bottom: 0.5rem;
-      }
-      nav .nav-links {
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: center;
-      }
-    }
+  nav {
+    height: 72px; /* same as desktop for consistency */
+    padding: 0 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  nav img.logo {
+    height: 64px; /* same as desktop */
+  }
+
+  nav .nav-links {
+    flex-direction: row;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  nav .nav-links a {
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+  }
+}
   </style>
 </head>
 <body>
