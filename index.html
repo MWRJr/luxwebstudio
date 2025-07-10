@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lux Web Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,6 +14,10 @@
       background-color: #0f172a;
       color: #f8fafc;
       line-height: 1.6;
+      font-size: 1.1rem;
+    }
+    h1, h2, h3 {
+      line-height: 1.3;
     }
     .fade-in {
       opacity: 0;
@@ -47,6 +51,7 @@
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
+      font-size: 1.2rem;
     }
     nav .nav-links a:hover {
       color: #38bdf8;
@@ -59,20 +64,20 @@
       clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     }
     header h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-weight: 700;
       margin-bottom: 1rem;
     }
     header p {
-      font-size: 1.25rem;
-      max-width: 700px;
+      font-size: 1.5rem;
+      max-width: 800px;
       margin: 0 auto 2rem;
     }
     .cta-btn {
       background: #facc15;
       color: #0f172a;
-      padding: 0.9rem 2rem;
-      font-size: 1rem;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
       font-weight: bold;
       border: none;
       border-radius: 10px;
@@ -85,11 +90,11 @@
     }
     section {
       padding: 6rem 2rem;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: #60a5fa;
       margin-bottom: 2rem;
       text-align: center;
@@ -100,32 +105,39 @@
       margin: 4rem auto;
       border-radius: 12px;
       text-align: center;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       color: #facc15;
     }
-    .services, .testimonials, .timeline {
+    .services, .testimonials, .timeline, .why-choose {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+      gap: 2.5rem;
       margin-top: 2rem;
     }
-    .card, .testimonial, .step {
+    .card, .testimonial, .step, .reason {
       background: #1e293b;
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 6px 16px rgba(0,0,0,0.4);
       transition: transform 0.2s;
+      text-align: center;
     }
-    .card:hover, .step:hover {
+    .card:hover, .step:hover, .reason:hover {
       transform: translateY(-8px);
     }
-    .card i {
-      font-size: 2.5rem;
+    .card i, .reason i {
+      font-size: 2.8rem;
       color: #38bdf8;
       margin-bottom: 0.75rem;
     }
     .testimonial {
       border-left: 5px solid #38bdf8;
+    }
+    .mockup {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      margin-top: 2rem;
     }
     footer {
       background: #0f172a;
@@ -151,6 +163,7 @@
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </div>
@@ -164,7 +177,8 @@
 
   <section id="about" class="fade-in">
     <h2>About</h2>
-    <p style="text-align: center; max-width: 700px; margin: auto;">I’m Mark — the guy behind Lux Web Studio. I help businesses build a strong online presence with affordable, clean, and mobile-ready websites. My mission is to give every brand a digital home that feels like a million bucks — without charging it.</p>
+    <p style="text-align: center; max-width: 800px; margin: auto;">I’m Mark — the guy behind Lux Web Studio. I help businesses build a strong online presence with affordable, clean, and mobile-ready websites. My mission is to give every brand a digital home that feels like a million bucks — without charging it.</p>
+    <img class="mockup" src="https://dummyimage.com/1000x600/1e293b/f8fafc&text=Website+Mockup" alt="Website Mockup">
   </section>
 
   <div class="highlight-section fade-in">
@@ -192,24 +206,28 @@
     </div>
   </section>
 
-  <section class="fade-in">
-    <h2>Our Process</h2>
-    <div class="timeline">
-      <div class="step">
-        <h3>1. Discovery</h3>
-        <p>We learn about your brand, goals, and vision.</p>
+  <section id="why" class="fade-in">
+    <h2>Why Choose Lux</h2>
+    <div class="why-choose">
+      <div class="reason">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>One-on-One Support</h3>
+        <p>You work directly with me — no middlemen, no runaround.</p>
       </div>
-      <div class="step">
-        <h3>2. Design</h3>
-        <p>We create wireframes and style drafts to review together.</p>
+      <div class="reason">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Optimized</h3>
+        <p>Your site will look amazing on phones, tablets, and desktops.</p>
       </div>
-      <div class="step">
-        <h3>3. Build</h3>
-        <p>The site is developed, tested, and optimized.</p>
+      <div class="reason">
+        <i class="fas fa-dollar-sign"></i>
+        <h3>Affordable</h3>
+        <p>Get a high-end look without the high-end agency price tag.</p>
       </div>
-      <div class="step">
-        <h3>4. Launch</h3>
-        <p>We go live and monitor the launch for a smooth transition.</p>
+      <div class="reason">
+        <i class="fas fa-stopwatch"></i>
+        <h3>Fast Turnaround</h3>
+        <p>Most sites are designed and delivered within a week.</p>
       </div>
     </div>
   </section>
