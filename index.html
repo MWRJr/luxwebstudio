@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -14,12 +16,37 @@
       color: #333;
     }
 
+    nav {
+      position: sticky;
+      top: 0;
+      background: #ffffffcc;
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4f46e5;
+    }
+
     header {
-      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+      background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(135deg, #4f46e5, #06b6d4);
       color: white;
       text-align: center;
       padding: 6rem 2rem;
       position: relative;
+      background-blend-mode: overlay;
     }
 
     header h1 {
@@ -43,11 +70,12 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
     .cta-btn:hover {
       background: #0891b2;
+      transform: scale(1.05);
     }
 
     section {
@@ -59,6 +87,11 @@
     h2 {
       color: #4f46e5;
       margin-bottom: 1rem;
+    }
+
+    .divider {
+      height: 80px;
+      background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZjNmNGY2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTIwMCA4MCI+PHBhdGggZD0iTTAgMGgxMjAwdjgwSDB6IiBvcGFjaXR5PSIuMjAiLz48L3N2Zz4=') center/cover no-repeat;
     }
 
     .services {
@@ -87,11 +120,37 @@
       color: #4f46e5;
     }
 
+    .testimonials {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .testimonial {
+      background: #ffffff;
+      border-left: 5px solid #06b6d4;
+      padding: 1.5rem;
+      border-radius: 10px;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
       background: #e0e7ff;
       color: #555;
+    }
+
+    .social-icons a {
+      margin: 0 0.5rem;
+      color: #4f46e5;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #06b6d4;
     }
 
     @keyframes fadeInDown {
@@ -107,18 +166,29 @@
 </head>
 <body>
 
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header>
     <h1>Lux Web Studio</h1>
     <p>Creative & Modern Websites for Small Businesses That Want to Look Like a Big Deal.</p>
     <a href="mailto:mark.rose@luxwebstudio.com" class="cta-btn">Request a Quote</a>
   </header>
 
-  <section>
+  <div class="divider"></div>
+
+  <section id="about">
     <h2>About</h2>
     <p>I’m Mark — the guy behind Lux Web Studio. I help businesses build a strong online presence with affordable, clean, and mobile-ready websites. My mission is to give every brand a digital home that feels like a million bucks — without charging it.</p>
   </section>
 
-  <section>
+  <div class="divider"></div>
+
+  <section id="services">
     <h2>Services</h2>
     <div class="services">
       <div class="card">
@@ -139,7 +209,25 @@
     </div>
   </section>
 
-  <section>
+  <div class="divider"></div>
+
+  <section id="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>“Mark absolutely nailed my site. Fast, clean, and looks incredible on mobile. Highly recommend!”</p>
+        <strong>– Alex T., Barber Shop Owner</strong>
+      </div>
+      <div class="testimonial">
+        <p>“I had no idea where to start. Mark took care of everything and made it simple for me.”</p>
+        <strong>– Stephanie R., Pet Sitter</strong>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="contact">
     <h2>Contact</h2>
     <p>Interested in working together or want a quote? Reach out to me:</p>
     <p><a href="mailto:mark.rose@luxwebstudio.com">mark.rose@luxwebstudio.com</a></p>
@@ -147,6 +235,11 @@
 
   <footer>
     &copy; 2025 Lux Web Studio. All rights reserved.
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
   </footer>
 
 </body>
