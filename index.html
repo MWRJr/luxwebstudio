@@ -209,7 +209,7 @@
     height: 88px;
     padding: 0 1rem;
     display: flex;
-    align-items: center; /* Center logo vertically */
+    align-items: center;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -217,17 +217,16 @@
 
   nav img.logo {
     height: 56px;
-    align-self: center; /* Center logo vertically */
+    align-self: center;
+    margin-right: auto;
   }
 
   nav .nav-links {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center; /* Center links horizontally */
-    gap: 0.9rem;
-    height: 100%;
     flex: 1;
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    align-items: flex-end;
+    gap: 0.8rem;
   }
 
   nav .nav-links a {
