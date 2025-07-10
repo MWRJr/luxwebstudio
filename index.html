@@ -52,10 +52,11 @@
       color: #38bdf8;
     }
     header {
-      background: linear-gradient(to right, #0ea5e9, #3b82f6);
-      padding: 8rem 2rem;
+      background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+      padding: 10rem 2rem 8rem;
       text-align: center;
       color: white;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     }
     header h1 {
       font-size: 3.5rem;
@@ -63,18 +64,18 @@
       margin-bottom: 1rem;
     }
     header p {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       max-width: 700px;
       margin: 0 auto 2rem;
     }
     .cta-btn {
       background: #facc15;
       color: #0f172a;
-      padding: 0.75rem 1.75rem;
+      padding: 0.9rem 2rem;
       font-size: 1rem;
       font-weight: bold;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
       transition: all 0.3s ease;
     }
@@ -83,20 +84,20 @@
       transform: scale(1.05);
     }
     section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
+      padding: 6rem 2rem;
+      max-width: 1100px;
       margin: auto;
     }
     h2 {
       font-size: 2rem;
       color: #60a5fa;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       text-align: center;
     }
     .highlight-section {
       background: #1e293b;
       padding: 3rem 2rem;
-      margin-top: 3rem;
+      margin: 4rem auto;
       border-radius: 12px;
       text-align: center;
       font-size: 1.1rem;
@@ -141,34 +142,6 @@
     .social-icons a:hover {
       color: #facc15;
     }
-    form {
-      display: grid;
-      gap: 1rem;
-      background: #1e293b;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    form input, form textarea, form select {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border-radius: 6px;
-      border: none;
-      outline: none;
-    }
-    form button {
-      background: #38bdf8;
-      color: #fff;
-      border: none;
-      padding: 0.75rem;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    form button:hover {
-      background: #0ea5e9;
-    }
   </style>
 </head>
 <body>
@@ -186,7 +159,7 @@
   <header class="fade-in">
     <h1>Lux Web Studio</h1>
     <p>Creative & Modern Websites for Small Businesses That Want to Look Like a Big Deal.</p>
-    <a href="#quote" class="cta-btn">Request a Quote</a>
+    <a href="mailto:mark.rose@luxwebstudio.com" class="cta-btn">Request a Quote</a>
   </header>
 
   <section id="about" class="fade-in">
@@ -255,23 +228,6 @@
     </div>
   </section>
 
-  <section id="quote" class="fade-in">
-    <h2>Request a Quote</h2>
-    <form action="mailto:mark.rose@luxwebstudio.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <select name="Project Type">
-        <option value="Website">Website</option>
-        <option value="Branding">Branding</option>
-        <option value="Ecommerce">Ecommerce</option>
-        <option value="Other">Other</option>
-      </select>
-      <input type="text" name="Budget" placeholder="Estimated Budget">
-      <textarea name="Message" rows="4" placeholder="Tell me about your project..."></textarea>
-      <button type="submit">Send Request</button>
-    </form>
-  </section>
-
   <section id="contact" class="fade-in">
     <h2>Contact</h2>
     <p style="text-align: center;">Want to work together or have questions?</p>
@@ -295,7 +251,6 @@
         }
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 </body>
