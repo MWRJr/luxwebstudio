@@ -208,29 +208,33 @@
   nav {
     height: 88px;
     padding: 0 1rem;
-    flex-direction: row;
+    display: flex;
+    align-items: flex-end; /* align everything to bottom */
     justify-content: space-between;
-    align-items: stretch; /* Allows children to fill full height */
+    flex-direction: row;
     flex-wrap: nowrap;
   }
 
   nav img.logo {
     height: 64px;
+    align-self: flex-end; /* push logo to bottom */
   }
 
   nav .nav-links {
+    display: flex;
     flex-direction: row;
-    gap: 0.8rem;
-    flex-wrap: wrap;
+    align-items: flex-end; /* align nav links to bottom */
     justify-content: center;
-    align-items: flex-end; /* Align nav links to the bottom */
+    gap: 0.8rem;
     height: 100%;
+    flex-wrap: nowrap;
   }
 
   nav .nav-links a {
     font-size: 0.9rem;
-    padding: 0; /* Remove extra top/bottom spacing */
+    padding: 0;
     white-space: nowrap;
+    line-height: 1; /* keeps vertical alignment tight */
   }
 }
   </style>
