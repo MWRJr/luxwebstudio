@@ -209,30 +209,32 @@
     height: 88px;
     padding: 0 1rem;
     display: flex;
-    align-items: flex-end;
+    align-items: center; /* Center logo vertically */
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
   }
 
   nav img.logo {
-    height: 60px;
-    align-self: flex-end;
+    height: 56px;
+    align-self: center; /* Center logo vertically */
   }
 
   nav .nav-links {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    justify-content: flex-end;
-    gap: 0.75rem;
+    justify-content: center; /* Center links horizontally */
+    gap: 0.9rem;
     height: 100%;
+    flex: 1;
   }
 
   nav .nav-links a {
     font-size: 0.85rem;
     line-height: 1;
-    padding-bottom: 4px; /* ensures visual balance */
+    padding-bottom: 4px;
+    white-space: nowrap;
   }
 }
   </style>
