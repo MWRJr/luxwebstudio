@@ -206,29 +206,32 @@
     }
 @media (max-width: 768px) {
   nav {
-    height: 88px; /* Match desktop height for consistency */
+    height: 88px;
     padding: 0 1rem;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: stretch; /* Allows children to fill full height */
+    flex-wrap: nowrap;
   }
 
   nav img.logo {
     height: 64px;
   }
 
-nav .nav-links {
-  flex-direction: row;
-  gap: 0.8rem; /* slightly smaller gap */
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
+  nav .nav-links {
+    flex-direction: row;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end; /* Align nav links to the bottom */
+    height: 100%;
+  }
 
-nav .nav-links a {
-  font-size: 0.9rem; /* smaller text */
-  padding: 0.3rem 0;
-  white-space: nowrap; /* keep links from breaking in half */
+  nav .nav-links a {
+    font-size: 0.9rem;
+    padding: 0; /* Remove extra top/bottom spacing */
+    white-space: nowrap;
+  }
 }
   </style>
 </head>
