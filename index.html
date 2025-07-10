@@ -22,21 +22,30 @@
       background: #ffffffcc;
       backdrop-filter: blur(6px);
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       z-index: 1000;
     }
 
-    nav a {
+    nav img.logo {
+      height: 40px;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav .nav-links a {
       text-decoration: none;
       color: #333;
       font-weight: 600;
       transition: color 0.3s;
     }
 
-    nav a:hover {
+    nav .nav-links a:hover {
       color: #4f46e5;
     }
 
@@ -45,7 +54,6 @@
       color: white;
       text-align: center;
       padding: 6rem 2rem;
-      position: relative;
       background-blend-mode: overlay;
     }
 
@@ -175,10 +183,13 @@
 <body>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
+    <img src="https://cdn.openai.com/chat-assets/user-logos/lux-logo-final.png" alt="Lux Web Studio Logo" class="logo" />
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
   <header>
@@ -256,3 +267,4 @@
 
 </body>
 </html>
+
