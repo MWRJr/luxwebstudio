@@ -15,7 +15,15 @@
       color: #f8fafc;
       line-height: 1.6;
     }
-
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
     nav {
       display: flex;
       justify-content: space-between;
@@ -27,46 +35,38 @@
       z-index: 1000;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     }
-
     nav img.logo {
       height: 140px;
     }
-
     nav .nav-links {
       display: flex;
       gap: 2rem;
     }
-
     nav .nav-links a {
       color: #f1f5f9;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
     }
-
     nav .nav-links a:hover {
       color: #38bdf8;
     }
-
     header {
       background: linear-gradient(to right, #0ea5e9, #3b82f6);
       padding: 8rem 2rem;
       text-align: center;
       color: white;
     }
-
     header h1 {
       font-size: 3.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
     }
-
     header p {
       font-size: 1.3rem;
       max-width: 700px;
       margin: 0 auto 2rem;
     }
-
     .cta-btn {
       background: #facc15;
       color: #0f172a;
@@ -78,25 +78,21 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
-
     .cta-btn:hover {
       background: #eab308;
       transform: scale(1.05);
     }
-
     section {
       padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
     }
-
     h2 {
       font-size: 2rem;
       color: #60a5fa;
       margin-bottom: 1.5rem;
       text-align: center;
     }
-
     .highlight-section {
       background: #1e293b;
       padding: 3rem 2rem;
@@ -106,74 +102,72 @@
       font-size: 1.1rem;
       color: #facc15;
     }
-
-    .services {
+    .services, .testimonials, .timeline {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
-
-    .card {
+    .card, .testimonial, .step {
       background: #1e293b;
       border-radius: 12px;
       padding: 2rem;
       box-shadow: 0 6px 16px rgba(0,0,0,0.4);
       transition: transform 0.2s;
     }
-
-    .card:hover {
+    .card:hover, .step:hover {
       transform: translateY(-8px);
     }
-
     .card i {
       font-size: 2.5rem;
       color: #38bdf8;
       margin-bottom: 0.75rem;
     }
-
-    .card h3 {
-      margin-bottom: 0.5rem;
-      color: #f8fafc;
-    }
-
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
     .testimonial {
-      background: #1e293b;
-      padding: 2rem;
       border-left: 5px solid #38bdf8;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-
-    .testimonial strong {
-      display: block;
-      margin-top: 1rem;
-      color: #cbd5e1;
-    }
-
     footer {
       background: #0f172a;
       text-align: center;
       padding: 2rem;
       color: #94a3b8;
     }
-
     .social-icons a {
       color: #60a5fa;
       margin: 0 0.5rem;
       font-size: 1.2rem;
       transition: color 0.3s ease;
     }
-
     .social-icons a:hover {
       color: #facc15;
+    }
+    form {
+      display: grid;
+      gap: 1rem;
+      background: #1e293b;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    form input, form textarea, form select {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+    form button {
+      background: #38bdf8;
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #0ea5e9;
     }
   </style>
 </head>
@@ -189,22 +183,22 @@
     </div>
   </nav>
 
-  <header>
+  <header class="fade-in">
     <h1>Lux Web Studio</h1>
     <p>Creative & Modern Websites for Small Businesses That Want to Look Like a Big Deal.</p>
-    <a href="mailto:mark.rose@luxwebstudio.com" class="cta-btn">Request a Quote</a>
+    <a href="#quote" class="cta-btn">Request a Quote</a>
   </header>
 
-  <section id="about">
+  <section id="about" class="fade-in">
     <h2>About</h2>
     <p style="text-align: center; max-width: 700px; margin: auto;">I’m Mark — the guy behind Lux Web Studio. I help businesses build a strong online presence with affordable, clean, and mobile-ready websites. My mission is to give every brand a digital home that feels like a million bucks — without charging it.</p>
   </section>
 
-  <div class="highlight-section">
+  <div class="highlight-section fade-in">
     <p><strong>💡 Did you know?</strong> A professionally built website can boost trust and increase sales by up to 80%. Don’t let a DIY site hold you back — let’s build something that truly represents your brand.</p>
   </div>
 
-  <section id="services">
+  <section id="services" class="fade-in">
     <h2>Services</h2>
     <div class="services">
       <div class="card">
@@ -225,7 +219,29 @@
     </div>
   </section>
 
-  <section id="testimonials">
+  <section class="fade-in">
+    <h2>Our Process</h2>
+    <div class="timeline">
+      <div class="step">
+        <h3>1. Discovery</h3>
+        <p>We learn about your brand, goals, and vision.</p>
+      </div>
+      <div class="step">
+        <h3>2. Design</h3>
+        <p>We create wireframes and style drafts to review together.</p>
+      </div>
+      <div class="step">
+        <h3>3. Build</h3>
+        <p>The site is developed, tested, and optimized.</p>
+      </div>
+      <div class="step">
+        <h3>4. Launch</h3>
+        <p>We go live and monitor the launch for a smooth transition.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="fade-in">
     <h2>What Clients Say</h2>
     <div class="testimonials">
       <div class="testimonial">
@@ -239,9 +255,26 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="quote" class="fade-in">
+    <h2>Request a Quote</h2>
+    <form action="mailto:mark.rose@luxwebstudio.com" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <select name="Project Type">
+        <option value="Website">Website</option>
+        <option value="Branding">Branding</option>
+        <option value="Ecommerce">Ecommerce</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" name="Budget" placeholder="Estimated Budget">
+      <textarea name="Message" rows="4" placeholder="Tell me about your project..."></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
+
+  <section id="contact" class="fade-in">
     <h2>Contact</h2>
-    <p style="text-align: center;">Interested in working together or want a quote? Reach out to me:</p>
+    <p style="text-align: center;">Want to work together or have questions?</p>
     <p style="text-align: center;"><a href="mailto:mark.rose@luxwebstudio.com">mark.rose@luxwebstudio.com</a></p>
   </section>
 
@@ -254,5 +287,16 @@
     </div>
   </footer>
 
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
