@@ -2,96 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lux Web Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f4f7fc;
+      background: #f3f4f6;
       color: #333;
-      line-height: 1.6;
     }
 
     header {
       background: linear-gradient(135deg, #4f46e5, #06b6d4);
       color: white;
       text-align: center;
-      padding: 4rem 2rem;
+      padding: 6rem 2rem;
+      position: relative;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      animation: fadeInDown 1s ease-out;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 1rem auto 2rem;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .cta-btn {
+      background: #06b6d4;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #0891b2;
     }
 
     section {
-      padding: 3rem 2rem;
-      max-width: 900px;
+      padding: 4rem 2rem;
+      max-width: 1000px;
       margin: auto;
     }
 
     h2 {
       color: #4f46e5;
+      margin-bottom: 1rem;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
       margin-top: 2rem;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      flex: 1 1 280px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
     }
 
-    ul li {
-      margin-bottom: 1rem;
-      background: #eef2ff;
-      padding: 1rem;
-      border-left: 5px solid #4f46e5;
-      border-radius: 5px;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    a {
-      color: #06b6d4;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .cta {
-      text-align: center;
-      padding: 2rem;
-      background: #f0f9ff;
-    }
-
-    .cta a {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #06b6d4;
-      color: white;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-
-    .cta a:hover {
-      background: #0891b2;
+    .card i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #4f46e5;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 2rem;
       background: #e0e7ff;
       color: #555;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -99,27 +109,41 @@
 
   <header>
     <h1>Lux Web Studio</h1>
-    <p>Professional Websites That Make Your Business Look Like a Boss.</p>
+    <p>Creative & Modern Websites for Small Businesses That Want to Look Like a Big Deal.</p>
+    <a href="mailto:your@email.com" class="cta-btn">Request a Quote</a>
   </header>
 
   <section>
     <h2>About</h2>
-    <p>I’m Mark — the guy behind Lux Web Studio. I help everyday business owners stand out online without getting overwhelmed or overcharged. Whether you need a redesign or something built from scratch, I’ve got you covered.</p>
-
-    <h2>Services</h2>
-    <ul>
-      <li><strong>Simple Site – $150:</strong> 1-page custom website, mobile-friendly, contact form included</li>
-      <li><strong>Standard Site – $300:</strong> Up to 3 pages, written content, mobile-optimized, SEO basics</li>
-      <li><strong>Pro Site – $500+:</strong> 5+ pages, booking/contact integrations, branding, blog-ready</li>
-    </ul>
-
-    <h2>Contact</h2>
-    <p>Ready to get started? Reach out via email: <a href="mailto:your@email.com">your@email.com</a></p>
+    <p>I’m Mark — the guy behind Lux Web Studio. I help businesses build a strong online presence with affordable, clean, and mobile-ready websites. My mission is to give every brand a digital home that feels like a million bucks — without charging it.</p>
   </section>
 
-  <div class="cta">
-    <a href="mailto:your@email.com">Request a Quote</a>
-  </div>
+  <section>
+    <h2>Services</h2>
+    <div class="services">
+      <div class="card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Simple Site – $150</h3>
+        <p>1-page custom website, mobile-friendly, contact form included. Perfect for getting started.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-layer-group"></i>
+        <h3>Standard Site – $300</h3>
+        <p>Up to 3 pages, written content included, SEO basics, mobile/tablet optimized. Built to grow with you.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-rocket"></i>
+        <h3>Pro Site – $500+</h3>
+        <p>5+ pages, booking/contact integrations, branding, blog/portfolio ready. Designed to impress.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Interested in working together or want a quote? Reach out to me:</p>
+    <p><a href="mailto:your@email.com">your@email.com</a></p>
+  </section>
 
   <footer>
     &copy; 2025 Lux Web Studio. All rights reserved.
