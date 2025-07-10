@@ -12,25 +12,24 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f3f4f6;
-      color: #333;
+      background: #1e1e2f;
+      color: #f9fafb;
     }
 
     nav {
       position: sticky;
       top: 0;
-      background: #ffffffcc;
-      backdrop-filter: blur(6px);
+      background: linear-gradient(to right, #111827, #1f2937);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1rem 2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       z-index: 1000;
     }
 
     nav img.logo {
-      height: 40px;
+      height: 60px;
     }
 
     nav .nav-links {
@@ -40,13 +39,13 @@
 
     nav .nav-links a {
       text-decoration: none;
-      color: #333;
+      color: #f3f4f6;
       font-weight: 600;
       transition: color 0.3s;
     }
 
     nav .nav-links a:hover {
-      color: #4f46e5;
+      color: #60a5fa;
     }
 
     header {
@@ -54,6 +53,7 @@
       color: white;
       text-align: center;
       padding: 6rem 2rem;
+      position: relative;
       background-blend-mode: overlay;
     }
 
@@ -93,13 +93,13 @@
     }
 
     h2 {
-      color: #4f46e5;
+      color: #93c5fd;
       margin-bottom: 1rem;
     }
 
     .divider {
       height: 80px;
-      background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZjNmNGY2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTIwMCA4MCI+PHBhdGggZD0iTTAgMGgxMjAwdjgwSDB6IiBvcGFjaXR5PSIuMjAiLz48L3N2Zz4=') center/cover no-repeat;
+      background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjM2M0ZTY2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTIwMCA4MCI+PHBhdGggZD0iTTAgMGgxMjAwdjgwSDB6IiBvcGFjaXR5PSIuMTUiLz48L3N2Zz4=') center/cover no-repeat;
     }
 
     .services {
@@ -110,11 +110,11 @@
     }
 
     .card {
-      background: white;
+      background: #111827;
       border-radius: 12px;
       padding: 1.5rem;
       flex: 1 1 280px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       transition: transform 0.2s ease;
     }
 
@@ -125,15 +125,15 @@
     .card i {
       font-size: 2rem;
       margin-bottom: 0.5rem;
-      color: #4f46e5;
+      color: #60a5fa;
     }
 
     .highlight-section {
-      background: #fff5eb;
+      background: #1f2937;
       padding: 4rem 2rem;
       text-align: center;
       font-size: 1.1rem;
-      color: #7c3aed;
+      color: #facc15;
     }
 
     .testimonials {
@@ -143,30 +143,30 @@
     }
 
     .testimonial {
-      background: #ffffff;
+      background: #111827;
       border-left: 5px solid #06b6d4;
       padding: 1.5rem;
       border-radius: 10px;
       flex: 1 1 300px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background: #e0e7ff;
-      color: #555;
+      background: #111827;
+      color: #9ca3af;
     }
 
     .social-icons a {
       margin: 0 0.5rem;
-      color: #4f46e5;
+      color: #60a5fa;
       font-size: 1.2rem;
       transition: color 0.3s ease;
     }
 
     .social-icons a:hover {
-      color: #06b6d4;
+      color: #facc15;
     }
 
     @keyframes fadeInDown {
@@ -184,7 +184,6 @@
 
   <nav>
     <img src="LuxWebStudio.png" alt="Lux Web Studio Logo" class="logo" />
-
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -240,11 +239,11 @@
     <div class="testimonials">
       <div class="testimonial">
         <p>“Mark nailed it. Fast turnaround, awesome design, and super easy to work with.”</p>
-        <strong>– Sarah J.</strong>
+        <strong>– Ethan A.</strong>
       </div>
       <div class="testimonial">
         <p>“I gave him a messy idea and he turned it into a polished, beautiful site. I'm blown away.”</p>
-        <strong>– Eric D.</strong>
+        <strong>– Ryan P.</strong>
       </div>
     </div>
   </section>
@@ -268,4 +267,3 @@
 
 </body>
 </html>
-
