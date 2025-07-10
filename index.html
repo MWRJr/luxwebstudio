@@ -1,48 +1,97 @@
-<!-- index.html for Lux Web Studio -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lux Web Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fc;
       color: #333;
+      line-height: 1.6;
     }
+
     header {
-      background: #111;
+      background: linear-gradient(135deg, #4f46e5, #06b6d4);
       color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 4rem 2rem;
     }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
     section {
-      padding: 2rem;
-      max-width: 800px;
+      padding: 3rem 2rem;
+      max-width: 900px;
       margin: auto;
     }
-    h1, h2 {
-      color: #222;
-    }
-    .cta {
-      background: #222;
-      color: white;
-      padding: 1rem;
-      text-align: center;
+
+    h2 {
+      color: #4f46e5;
       margin-top: 2rem;
     }
-    .cta a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
     }
+
+    ul li {
+      margin-bottom: 1rem;
+      background: #eef2ff;
+      padding: 1rem;
+      border-left: 5px solid #4f46e5;
+      border-radius: 5px;
+    }
+
+    a {
+      color: #06b6d4;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 2rem;
+      background: #f0f9ff;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #06b6d4;
+      color: white;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background: #0891b2;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
+      background: #e0e7ff;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
@@ -55,22 +104,21 @@
 
   <section>
     <h2>About</h2>
-    <p>I’m Mark — the guy behind Lux Web Studio. I started this to help everyday business owners stand out online without getting overwhelmed or overcharged. Whether you need a fresh site, a redesign, or something built from scratch, I’ve got you covered.</p>
+    <p>I’m Mark — the guy behind Lux Web Studio. I help everyday business owners stand out online without getting overwhelmed or overcharged. Whether you need a redesign or something built from scratch, I’ve got you covered.</p>
 
     <h2>Services</h2>
     <ul>
-      <li><strong>Simple Site – $150</strong>: 1-page custom website, mobile-friendly, contact form included</li>
-      <li><strong>Standard Site – $300</strong>: Up to 3 pages, written content, mobile-optimized, SEO basics</li>
-      <li><strong>Pro Site – $500+</strong>: 5+ pages, booking/contact integrations, branding, blog-ready</li>
+      <li><strong>Simple Site – $150:</strong> 1-page custom website, mobile-friendly, contact form included</li>
+      <li><strong>Standard Site – $300:</strong> Up to 3 pages, written content, mobile-optimized, SEO basics</li>
+      <li><strong>Pro Site – $500+:</strong> 5+ pages, booking/contact integrations, branding, blog-ready</li>
     </ul>
 
     <h2>Contact</h2>
-    <p>Ready to get started? Reach out via email:</p>
-    <p><a href="mailto:your@email.com">your@email.com</a></p>
+    <p>Ready to get started? Reach out via email: <a href="mailto:your@email.com">your@email.com</a></p>
   </section>
 
   <div class="cta">
-    <p><a href="mailto:your@email.com">Request a Quote Now →</a></p>
+    <a href="mailto:your@email.com">Request a Quote</a>
   </div>
 
   <footer>
@@ -79,4 +127,3 @@
 
 </body>
 </html>
-
