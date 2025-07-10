@@ -97,6 +97,11 @@
       font-weight: 700;
       margin-bottom: 1rem;
     }
+    .hero-logo {
+  max-width: 160px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+}
     header p {
       font-size: 1.3rem;
       max-width: 800px;
@@ -222,12 +227,12 @@
   }
 
   nav .nav-links {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Center links horizontally */
-    align-items: flex-end;
-    gap: 0.8rem;
-  }
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  gap: 0.8rem;
+}
 
   nav .nav-links a {
     font-size: 0.85rem;
@@ -253,10 +258,11 @@
     </div>
   </nav>
   <header class="fade-in">
-    <h1>Lux Web Studio</h1>
-    <p>Creative & Modern Websites for Small Businesses That Want to Look Like a Big Deal.</p>
-    <a href="mailto:mark.rose@luxwebstudio.com" class="cta-btn">Request a Quote</a>
-  </header>
+    <img src="LuxWebStudio.png" alt="Lux Web Studio Logo" class="hero-logo">
+  <h1>Lux Web Studio</h1>
+  <p>Creative & Modern Websites for Small Businesses That Want to Look Like a Big Deal.</p>
+  <a href="#contact" class="cta-btn">Let's Work Together</a>
+</header>
   <section id="about" class="fade-in">
     <h2><i class="fa-solid fa-user section-icon"></i>About</h2>
     <p class="section-subtitle">Meet the creator and mission behind Lux Web Studio</p>
