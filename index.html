@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lux Web Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -130,13 +130,13 @@
       font-size: 1.25rem;
       color: #facc15;
     }
-    .services, .testimonials, .timeline, .why-choose {
+    .services, .testimonials, .why-choose {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2.5rem;
       margin-top: 2rem;
     }
-    .card, .testimonial, .step, .reason {
+    .card, .testimonial, .reason {
       background: #1e293b;
       border-radius: 12px;
       padding: 2rem;
@@ -144,15 +144,13 @@
       transition: transform 0.2s;
       text-align: center;
     }
-    .card:hover, .step:hover, .reason:hover {
+    .card:hover, .reason:hover {
       transform: translateY(-8px);
     }
     .card i, .reason i, .section-icon {
       font-size: 2.4rem;
       color: #38bdf8;
       margin-bottom: 0.75rem;
-      display: block;
-      text-align: center;
     }
     .testimonial {
       border-left: 5px solid #38bdf8;
@@ -187,7 +185,6 @@
   </style>
 </head>
 <body>
-
   <nav>
     <img src="LuxWebStudio.png" alt="Lux Web Studio Logo" class="logo" />
     <div class="nav-links">
@@ -198,23 +195,19 @@
       <a href="#contact">Contact</a>
     </div>
   </nav>
-
   <header class="fade-in">
     <h1>Lux Web Studio</h1>
     <p>Creative & Modern Websites for Small Businesses That Want to Look Like a Big Deal.</p>
     <a href="mailto:mark.rose@luxwebstudio.com" class="cta-btn">Request a Quote</a>
   </header>
-
   <section id="about" class="fade-in">
     <h2><i class="fas fa-user section-icon"></i>About</h2>
     <p class="section-subtitle">Meet the creator and mission behind Lux Web Studio</p>
     <p style="text-align: center; max-width: 800px; margin: auto;">I’m Mark — the guy behind Lux Web Studio. I help businesses build a strong online presence with affordable, clean, and mobile-ready websites. My mission is to give every brand a digital home that feels like a million bucks — without charging it.</p>
   </section>
-
   <div class="highlight-section fade-in">
     <p><strong>💡 Did you know?</strong> A professionally built website can boost trust and increase sales by up to 80%. Don’t let a DIY site hold you back — let’s build something that truly represents your brand.</p>
   </div>
-
   <section id="services" class="fade-in">
     <h2><i class="fas fa-briefcase section-icon"></i>Services</h2>
     <p class="section-subtitle">Flexible pricing for sites that fit your goals and budget</p>
@@ -236,7 +229,6 @@
       </div>
     </div>
   </section>
-
   <section id="why" class="fade-in">
     <h2><i class="fas fa-thumbs-up section-icon"></i>Why Choose Lux</h2>
     <p class="section-subtitle">What sets Lux Web Studio apart from the crowd</p>
@@ -263,7 +255,6 @@
       </div>
     </div>
   </section>
-
   <section id="testimonials" class="fade-in">
     <h2><i class="fas fa-comments section-icon"></i>What Clients Say</h2>
     <p class="section-subtitle">Hear from real people who worked with Lux</p>
@@ -278,37 +269,18 @@
       </div>
     </div>
   </section>
-
   <section id="contact" class="fade-in">
     <h2><i class="fas fa-envelope section-icon"></i>Contact</h2>
     <p class="section-subtitle">Let’s get your website started today</p>
     <p style="text-align: center;"><a href="mailto:mark.rose@luxwebstudio.com">mark.rose@luxwebstudio.com</a></p>
   </section>
-
   <footer>
-    <div class="footer-grid">
-      <div>
-        <h3>Lux Web Studio</h3>
-        <p>Creative and modern websites for small businesses.</p>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <p><a href="mailto:mark.rose@luxwebstudio.com">mark.rose@luxwebstudio.com</a></p>
-      </div>
-      <div>
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-    </div>
+    <h3>Lux Web Studio</h3>
+    <p>Creative and modern websites for small businesses.</p>
     <div class="footer-bottom">
       &copy; 2025 Lux Web Studio. All rights reserved.
     </div>
   </footer>
-
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
